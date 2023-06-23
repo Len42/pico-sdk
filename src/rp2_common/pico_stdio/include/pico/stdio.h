@@ -114,6 +114,8 @@ int putchar_raw(int c);
  */
 int puts_raw(const char *s);
 
+bool stdio_put_string(const char *s, int len, bool newline, bool no_cr);
+
 /*! \brief get notified when there are input characters available
  * \ingroup pico_stdio
  *

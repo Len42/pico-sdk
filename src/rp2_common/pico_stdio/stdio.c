@@ -90,7 +90,7 @@ static void stdio_out_chars_crlf(stdio_driver_t *driver, const char *s, int len)
 #endif
 }
 
-static bool stdio_put_string(const char *s, int len, bool newline, bool no_cr) {
+bool stdio_put_string(const char *s, int len, bool newline, bool no_cr) {
     bool serialized = stdout_serialize_begin();
     if (!serialized) {
 #if PICO_STDIO_IGNORE_NESTED_STDOUT
